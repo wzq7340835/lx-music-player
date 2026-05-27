@@ -67,6 +67,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.LXMusicPlayer" />
 
+        <!-- My List Activity -->
+        <activity
+            android:name=".activity.MyListActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/Theme.LXMusicPlayer" />
+
         <!-- Settings Activity -->
         <activity
             android:name=".activity.SettingsActivity"
