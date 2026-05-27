@@ -240,6 +240,9 @@ public class PlayerManager {
         }
         
         currentQueueIndex = (currentQueueIndex + 1) % playQueue.size();
+        if (currentQueueIndex < 0) {
+            currentQueueIndex = 0;
+        }
         SongInfo nextSong = playQueue.get(currentQueueIndex);
         
         MusicSourceManager sourceManager = cn.lxmusic.player.LXMusicApplication.getInstance().getSourceManager();
@@ -263,6 +266,9 @@ public class PlayerManager {
         }
         
         currentQueueIndex = (currentQueueIndex - 1 + playQueue.size()) % playQueue.size();
+        if (currentQueueIndex < 0) {
+            currentQueueIndex = 0;
+        }
         SongInfo previousSong = playQueue.get(currentQueueIndex);
         
         MusicSourceManager sourceManager = cn.lxmusic.player.LXMusicApplication.getInstance().getSourceManager();

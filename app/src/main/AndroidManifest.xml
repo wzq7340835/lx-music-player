@@ -74,6 +74,13 @@
             android:parentActivityName=".activity.MainActivity"
             android:theme="@style/Theme.LXMusicPlayer" />
 
+        <!-- Playlist Activity -->
+        <activity
+            android:name=".activity.PlaylistActivity"
+            android:exported="false"
+            android:parentActivityName=".activity.PlayerActivity"
+            android:theme="@style/Theme.LXMusicPlayer" />
+
         <!-- Settings Activity -->
         <activity
             android:name=".activity.SettingsActivity"
