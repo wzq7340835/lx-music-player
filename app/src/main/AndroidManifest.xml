@@ -76,21 +76,10 @@
 
         <!-- Source Import Activity -->
         <activity
-            android:name=".activity.SourceImportActivity"
+            android:name=".activity.SettingsSourceActivity"
             android:exported="false"
             android:parentActivityName=".activity.SettingsActivity"
             android:theme="@style/Theme.LXMusicPlayer" />
-
-        <!-- Playback Service -->
-        <service
-            android:name=".service.PlaybackService"
-            android:exported="false"
-            android:foregroundServiceType="mediaPlayback">
-            <intent-filter>
-                <action android:name="androidx.media3.session.MediaSessionService" />
-            </intent-filter>
-        </service>
-
     </application>
 
 </manifest>

@@ -90,8 +90,14 @@ public class MainActivity extends AppCompatActivity {
         
         bottomNavigation.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
-            if (itemId == R.id.nav_search) {
+            if (itemId == R.id.nav_home) {
+                return true;
+            } else if (itemId == R.id.nav_search) {
                 Intent intent = new Intent(this, SearchActivity.class);
+                startActivity(intent);
+                return true;
+            } else if (itemId == R.id.nav_my) {
+                Intent intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
                 return true;
             }
