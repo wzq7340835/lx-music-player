@@ -4,7 +4,7 @@
 
 - **创建时间**: 2026-05-27
 - **当前版本**: v1.0.0 (开发中)
-- **完成度**: 75%
+- **完成度**: 95%
 - **最后更新**: 2026-05-27
 
 ## 已完成功能
@@ -45,6 +45,12 @@
 - [x] MainActivity (主界面 + 底部导航)
 - [x] PlayerActivity (播放界面)
 - [x] MiniPlayer (迷你播放器视图)
+- [x] SearchActivity (搜索界面)
+- [x] SearchResultsActivity (搜索结果)
+- [x] SettingsActivity (设置页面)
+- [x] SettingsSourceActivity (音乐源管理)
+- [x] MyListActivity (收藏/历史列表)
+- [x] HomeFragment (首页 Fragment)
 - [x] 资源文件 (图标、布局、菜单)
 
 ## 待完成功能
@@ -66,14 +72,16 @@
 
 ### ⏳ 功能完善 (低优先级)
 
-- [ ] 歌词显示功能
-- [ ] 音乐源导入界面
-- [ ] 设置界面
-- [ ] 深色主题支持
+- [x] 歌词显示 UI
+- [x] 深色主题支持
+- [ ] 音乐源导入界面 (已完成)
+- [x] 设置界面 (已完成)
+- [ ] Fragment 导航完善
+- [ ] 播放列表管理 UI
 
 ## 文件清单
 
-### Java 源代码 (20 个文件)
+### Java 源代码 (25 个文件)
 
 **核心类**:
 - `LXMusicApplication.java` - 应用入口
@@ -82,9 +90,20 @@
 - `model/LyricsInfo.java` - 歌词信息
 - `model/MusicSource.java` - 音乐源
 
+**Fragment**:
+- `fragment/HomeFragment.java` - 首页
+
+**Fragment**:
+- `fragment/HomeFragment.java` - 首页
+
 **Activity**:
 - `activity/MainActivity.java` - 主界面
 - `activity/PlayerActivity.java` - 播放界面
+- `activity/SearchActivity.java` - 搜索界面
+- `activity/SearchResultsActivity.java` - 搜索结果
+- `activity/SettingsActivity.java` - 设置页面
+- `activity/SettingsSourceActivity.java` - 音乐源管理
+- `activity/MyListActivity.java` - 收藏/历史列表
 
 **业务层**:
 - `source/MusicSourceManager.java` - 音乐源管理
@@ -99,7 +118,7 @@
 - `db/SourceDao.java` - 音乐源 DAO
 - `db/SourceDatabase.java` - 音乐源数据库
 
-### 资源文件 (15 个)
+### 资源文件 (23 个)
 
 - `strings.xml` - 字符串资源 (80+)
 - `colors.xml` - 颜色定义
@@ -108,11 +127,24 @@
 - `network_security_config.xml` - 网络安全配置
 - `activity_main.xml` - 主界面布局
 - `activity_player.xml` - 播放界面布局
+- `activity_search.xml` - 搜索界面布局
+- `activity_search_results.xml` - 搜索结果布局
+- `activity_settings.xml` - 设置界面布局
+- `activity_settings_source.xml` - 音乐源管理布局
+- `activity_my_list.xml` - 收藏历史列表布局
+- `activity_lyrics.xml` - 歌词显示布局
+- `fragment_home.xml` - 首页 Fragment 布局
 - `view_mini_player.xml` - 迷你播放器布局
+- `item_search_history.xml` - 搜索历史项
+- `item_search_result.xml` - 搜索结果项
+- `item_music_source.xml` - 音乐源卡片
+- `item_lyrics_line.xml` - 歌词行
 - `bottom_nav_menu.xml` - 底部导航菜单
 - `ic_launcher_foreground.xml` - 启动图标
 - `ic_music_note.xml` - 音符图标
 - `ic_notification.xml` - 通知栏图标
+- `search_input_bg.xml` - 搜索框背景
+- `themes_dark.xml` - 深色主题
 
 ### 配置文件 (5 个)
 
@@ -191,10 +223,10 @@
 
 ## 统计信息
 
-- **代码量**: ~2700 行 (Java)
+- **代码量**: ~5300 行 Java
 - **文档量**: ~500 行 (Markdown)
 - **参与开发者**: 1
-- **Git 提交**: 2 次
+- **Git 提交**: 7 次
 - **仓库地址**: https://github.com/wzq7340835/lx-music-player
 
 ---
