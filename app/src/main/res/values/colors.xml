@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#FF6B4A</color>
+    <color name="primary_dark">#E85438</color>
+    <color name="primary_light">#FF8F6F</color>
+    
+    <!-- Secondary Colors -->
+    <color name="secondary">#5C7CFA</color>
+    <color name="secondary_dark">#4263EB</color>
+    
+    <!-- Background Colors -->
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#F8F9FA</color>
+    <color name="surface_variant">#E9ECEF</color>
+    
+    <!-- Text Colors -->
+    <color name="on_background">#1A1C1E</color>
+    <color name="on_surface">#495057</color>
+    <color name="on_surface_variant">#868E96</color>
+    <color name="on_primary">#FFFFFF</color>
+    
+    <!-- Status Colors -->
+    <color name="success">#40C057</color>
+    <color name="error">#FA5252</color>
+    <color name="warning">#FFB900</color>
+    <color name="info">#339AF0</color>
+    
+    <!-- Player Colors -->
+    <color name="progress">#FF6B4A</color>
+    <color name="progress_background">#E9ECEF</color>
+    <color name="lyrics_current">#FF6B4A</color>
+    <color name="lyrics_normal">#868E96</color>
+    
+    <!-- Divider -->
+    <color name="divider">#E9ECEF</color>
+</resources>
