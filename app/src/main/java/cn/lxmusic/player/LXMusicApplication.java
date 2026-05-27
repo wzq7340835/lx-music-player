@@ -1,12 +1,13 @@
 package cn.lxmusic.player;
 
 import android.app.Application;
-import android.content.Context;
+import cn.lxmusic.player.player.PlayerManager;
 import cn.lxmusic.player.source.MusicSourceManager;
 
 public class LXMusicApplication extends Application {
     private static LXMusicApplication instance;
     private MusicSourceManager sourceManager;
+    private PlayerManager playerManager;
     
     @Override
     public void onCreate() {
@@ -21,5 +22,13 @@ public class LXMusicApplication extends Application {
     
     public MusicSourceManager getSourceManager() {
         return sourceManager;
+    }
+    
+    public PlayerManager getPlayerManager() {
+        return playerManager;
+    }
+    
+    public void setPlayerManager(PlayerManager playerManager) {
+        this.playerManager = playerManager;
     }
 }
