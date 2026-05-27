@@ -87,6 +87,16 @@ public class MainActivity extends AppCompatActivity {
         
         songTitle.setText("未播放");
         songArtist.setText("点击搜索音乐");
+        
+        bottomNavigation.setOnItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            if (itemId == R.id.nav_search) {
+                Intent intent = new Intent(this, SearchActivity.class);
+                startActivity(intent);
+                return true;
+            }
+            return false;
+        });
     }
     
     public void updateMiniPlayer(SongInfo song) {
