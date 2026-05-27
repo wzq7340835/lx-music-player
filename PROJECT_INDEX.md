@@ -4,7 +4,8 @@
 
 - **创建时间**: 2026-05-27
 - **当前版本**: v1.0.0 (开发中)
-- **完成度**: 60%
+- **完成度**: 75%
+- **最后更新**: 2026-05-27
 
 ## 已完成功能
 
@@ -27,41 +28,52 @@
 - [x] 音乐源管理器 (MusicSourceManager)
 - [x] 歌词解析器 (LyricsParser)
 - [x] JavaScript 执行器 (QuickJsExecutor) - 基础版本
+- [x] 播放器管理器 (PlayerManager)
+  - [x] 播放/暂停/继续/seek 控制
+  - [x] 播放队列管理
+  - [x] 三种播放模式
+  - [x] 进度更新监听
+
+### ✅ 后台服务
+
+- [x] PlaybackService (后台播放服务)
+- [x] 通知栏播放控制
+- [x] MediaSession 集成
+
+### ✅ UI 界面
+
+- [x] MainActivity (主界面 + 底部导航)
+- [x] PlayerActivity (播放界面)
+- [x] MiniPlayer (迷你播放器视图)
+- [x] 资源文件 (图标、布局、菜单)
 
 ## 待完成功能
 
-### ⏳ 播放器核心
+### ⏳ 搜索功能 (高优先级)
 
-- [ ] ExoPlayer 封装 (PlayerManager)
-- [ ] 播放控制 (暂停/继续/seek)
-- [ ] 播放队列管理
-- [ ] 播放模式切换
-- [ ] 通知栏播放控制
-
-### ⏳ UI 界面
-
-- [ ] MainActivity (主界面)
-- [ ] PlayerActivity (播放界面)
+- [ ] 聚合搜索服务实现
 - [ ] SearchActivity (搜索界面)
-- [ ] SettingsActivity (设置界面)
-- [ ] SourceImportActivity (音乐源导入)
-
-### ⏳ 搜索功能
-
-- [ ] 聚合搜索服务
 - [ ] 搜索历史记录
 - [ ] 搜索结果展示
-- [ ] 搜索建议
+- [ ] Fragment 导航配置
 
-### ⏳ 数据管理
+### ⏳ 数据管理 (中优先级)
 
 - [ ] 收藏管理 (FavoriteManager)
 - [ ] 历史管理 (HistoryManager)
 - [ ] Room 数据库完整实现 (favorites, history 表)
+- [ ] 收藏和历史记录 UI 界面
+
+### ⏳ 功能完善 (低优先级)
+
+- [ ] 歌词显示功能
+- [ ] 音乐源导入界面
+- [ ] 设置界面
+- [ ] 深色主题支持
 
 ## 文件清单
 
-### Java 源代码 (15 个文件)
+### Java 源代码 (20 个文件)
 
 **核心类**:
 - `LXMusicApplication.java` - 应用入口
@@ -70,16 +82,39 @@
 - `model/LyricsInfo.java` - 歌词信息
 - `model/MusicSource.java` - 音乐源
 
+**Activity**:
+- `activity/MainActivity.java` - 主界面
+- `activity/PlayerActivity.java` - 播放界面
+
 **业务层**:
 - `source/MusicSourceManager.java` - 音乐源管理
 - `source/QuickJsExecutor.java` - JS 脚本执行
+- `player/PlayerManager.java` - 播放器管理
 - `util/LyricsParser.java` - 歌词解析
+
+**服务层**:
+- `service/PlaybackService.java` - 后台播放服务
 
 **数据层**:
 - `db/SourceDao.java` - 音乐源 DAO
 - `db/SourceDatabase.java` - 音乐源数据库
 
-### 资源文件 (8 个)
+### 资源文件 (15 个)
+
+- `strings.xml` - 字符串资源 (80+)
+- `colors.xml` - 颜色定义
+- `themes.xml` - 主题样式
+- `AndroidManifest.xml` - 应用清单
+- `network_security_config.xml` - 网络安全配置
+- `activity_main.xml` - 主界面布局
+- `activity_player.xml` - 播放界面布局
+- `view_mini_player.xml` - 迷你播放器布局
+- `bottom_nav_menu.xml` - 底部导航菜单
+- `ic_launcher_foreground.xml` - 启动图标
+- `ic_music_note.xml` - 音符图标
+- `ic_notification.xml` - 通知栏图标
+
+### 配置文件 (5 个)
 
 - `strings.xml` - 字符串资源 (80+)
 - `colors.xml` - 颜色定义
@@ -156,9 +191,11 @@
 
 ## 统计信息
 
-- **代码量**: ~1500 行 (Java)
+- **代码量**: ~2700 行 (Java)
 - **文档量**: ~500 行 (Markdown)
 - **参与开发者**: 1
+- **Git 提交**: 2 次
+- **仓库地址**: https://github.com/wzq7340835/lx-music-player
 
 ---
 
